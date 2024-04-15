@@ -1,7 +1,14 @@
 body {
     background: black;
+
+
+
 }
 
+#myAudio {
+    /* opacity: 0; */
+    display: none;
+}
 
 .chest {
     position: absolute;

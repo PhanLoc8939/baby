@@ -19,21 +19,20 @@ function fadeIn() {
         }(i);
     }
 };
-// const audioElement = document.querySelector(".content audio");
 
 
 document.querySelector(".content").onclick = () => {
     document.querySelector("#heart").hidden = false
-    document.querySelector("body").style.backgroundColor = "#542246"
+    document.querySelector("body").style.background = "url('./bg.jpg')"
+    document.querySelector("body").style.backgroundSize = "cover"
+    document.querySelector("body").style.backgroundRepeat = "no-repeat"
     document.querySelector("#heart").hidden = false
     document.querySelector(".content").onclick = () => {}
-    const audioElement = this.nextElementSibling;
-    if (audioElement && audioElement.tagName === "AUDIO") {
-        // Chèn thuộc tính autoplay vào thẻ audio
-        audioElement.setAttribute("autoplay", "");
-    }
-    // if (audioElement) {
-    //     audioElement.setAttribute("autoplay", "");
-    // }
     fadeIn()
 }
+document.getElementById("playAudio").addEventListener("click", function () {
+    var audio = document.getElementById("myAudio");
+    if (audio.paused) {
+        audio.play();
+    }
+});
